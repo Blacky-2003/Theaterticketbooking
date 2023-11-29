@@ -1,0 +1,399 @@
+@font-face {
+  font-family: myfont1;
+  src: url(assets/fonts/beasigne.otf);
+}
+
+@font-face {
+  font-family: myfont2;
+  src: url(assets/fonts/jazmond-demo.ttf);
+}
+
+@font-face {
+  font-family: myfont3;
+  src: url(assets/fonts/darklinos.otf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #ffce26;
+  color: black;
+}
+
+.up-coming-heading::selection {
+  background-color: red;
+  color: black;
+}
+
+.cmp-logo {
+  color: white;
+  margin: 20px;
+  font-family: myfont1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+
+.nav-box {
+  background-color: black;
+  height: 70px;
+  top: 0%;
+  position: sticky;
+  border-bottom: #ffce26 1px solid;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.nav-iteams>ul>li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 18px;
+}
+
+.nav-iteams>ul>li>a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 0.5s ease;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-right: 50px;
+  font-family: myfont3;
+  font-size: 13px;
+}
+
+.nav-iteams>ul>li>a:hover,
+.nav-iteams>ul>li>a.active {
+  border-bottom: 2px rgb(255, 0, 0) solid;
+  padding-bottom: 5px;
+  color: #ffce26;
+  letter-spacing: 5px;
+}
+
+.login-btn>a>button {
+  background-color: black;
+  border: rgb(0, 0, 0) 2px solid;
+  margin: 15px;
+  color: white;
+  letter-spacing: 3px;
+  padding: 8px 13px;
+  border-radius: 5px;
+  font-size: 8px;
+  font-weight: 500;
+  font-family: myfont1;
+  transition: all .5s ease-in-out;
+}
+
+.login-btn>a>button:hover {
+  color: black;
+  background-color: #ffce26;
+}
+
+.toggle-btn-menu>button {
+  background-color: black;
+  margin: 15px;
+  border: none;
+}
+
+
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-weight: bolder;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+  border-radius: 50%;
+  top: 45%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #ffce26;
+  opacity: 2;
+}
+
+
+
+.alldots {
+  position: absolute;
+  bottom: 80px;
+  color: aliceblue;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0%;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0px 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.now-showing-heading,
+.up-coming-heading {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 4px;
+  word-spacing: 5px;
+  font-family: myfont1;
+}
+
+.now-showing {
+  margin-top: 100px;
+}
+
+.now-showing,
+.up-coming {
+  margin-bottom: 100px;
+}
+
+.up-coming-img>img:hover {
+  box-shadow: 0px 0px 15px 2px rgb(255, 0, 0);
+  transform: scale(1.1);
+}
+
+.container {
+  display: flex;
+}
+
+.card {
+  height: 350px;
+  width: 14rem;
+  margin: 50px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+}
+
+.card>img {
+  height: 350px;
+  width: 14rem;
+  border-radius: 3px;
+  transition: all .5s ease-in-out;
+}
+
+.card-body {
+  height: 80px;
+  width: 14rem;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  background: rgb(0, 0, 0);
+  color: wheat;
+  bottom: 0px;
+  transition: all 0.6s ease-in-out;
+}
+
+.titleofmovie,
+.titleofmovie-upcoming {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  word-spacing: 6px;
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  font-size: 16px;
+  text-align: center;
+  font-family: myfont1;
+  transition: all 0.6s ease-in-out;
+}
+
+.trailer,
+.book {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #ffce26;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  transition: all 0.6s ease-in-out;
+}
+
+.trailer {
+  margin-right: 8px;
+}
+
+.book {
+  margin-left: 13px;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 4px rgba(255, 206, 38, 1);
+  border: none !important;
+}
+
+.up-coming-img:hover {
+  box-shadow: 0px 0px 15px 4px rgb(255, 0, 0);
+}
+
+.card:hover .card-body {
+  height: 150px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.card:hover .titleofmovie {
+  color: #ffce26;
+}
+
+.card:hover .titleofmovie-upcoming {
+  color: red;
+}
+
+.card:hover button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+
+.footer-box{
+  margin-bottom: 50px;
+}
+.row1{
+  display: flex;
+  justify-content: space-between;
+}
+.fs ul li{
+  list-style: none;
+  color: #ffce26;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-family: myfont3;
+}
+
+.fs{
+  margin-bottom: 10px;
+}
+
+.cinemas-heading, .brand-heading, .general-heading{
+  margin-bottom: 20px !important;
+  font-family: myfont2;
+  letter-spacing: 4px !important;
+  font-weight: 500 !important;
+  font-size: 20px;
+}
+
+.fs ul li a{
+  text-decoration: none;
+  font-size: 13px !important;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #717171 50%, #ff5858 50%, red);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+} 
+
+
+.fs ul li a:hover{
+  background-position: -100%;
+}
+
+.terms-policy{
+  display: flex;
+  margin-top: 50px;
+}
+
+.tp li{
+  display: inline-block;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.tp a{
+  background: linear-gradient(to right, #717171 50%, #ffee00 50%, #ffce26);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.7s ease-out;
+   color:#717171;
+   font-family: myfont3;
+   font-size: 13px;
+   text-decoration: none;
+   letter-spacing: 3px;
+}
+
+.tp a:hover{
+  background-position: -100%;
+  color:#ffce26;
+  text-decoration: none;
+}
+
+i{
+  color: white;
+  font-size: 20px;
+}
+
+.socialmedias{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.cpyryt{
+  text-transform: uppercase;
+  color: #717171;
+  word-spacing: 5px;
+  letter-spacing: 3px;
+  font-family: myfont1;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 40px 0px;
+}
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NILA Cinemas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: black;">
+  <div class="nav-box">
+    <div class="container-fluid">
+      <nav class="nav-bar">
+        <div class="cmp-logo">
+          nila Cinemas
+        </div>
+        <div class="nav-iteams d-none d-md-block">
+          <ul>
+            <li><a href="#nowshowingmovies">MOVIES</a></li>
+            <li><a href="">FOODS</a></li>
+            <li><a href="">OFFERS</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="login-btn d-none d-md-block">
+          <a href="loginpage.html" target="_blank"><button type="button">LOGIN</button></a>
+        </div>
+        <div class="toggle-btn-menu d-md-none">
+          <button type="button"><i class="fa fa-bars" aria-hidden="true"
+              style="font-size: 30px; color:gold;"></i></button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="img-part">
+    <div class="myslides d-none d-md-block">
+      <img class="mySlides" src="assets/scrollimg/vikram.jpg" style="width:100%; max-height: 600px">
+      <img class="mySlides" src="assets/scrollimg/johnwick.jpg" style="width:100%; max-height: 600px">
+      <img class="mySlides" src="assets/scrollimg/pushpa.jpg" style="width:100%; max-height: 600px">
+      <img class="mySlides" src="assets/scrollimg/kgf.jpg" style="width:100%; max-height: 600px">
+    </div>
+    <div class="d-none d-md-block buttons">
+      <button class="prev" onclick="plusSlides(-1)"><</button>
+          <button class="next" onclick="plusSlides(1)">></button>
+    </div>
+    <div class="alldots d-none d-md-block">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+  </div>
+
+
+
+  <div class="now-showing" id="nowshowingmovies">
+    <div class="container-fluid">
+      <p class="now-showing-heading">
+        <font style="color: #ffce26;">now</font> showing
+      </p>
+      <div class="row">
+        <div class="disforcard col-md-3">
+          <div class="card" style="background: black; border-radius: 15px;">
+            <img src="assets/card images/leo.jpg" alt="">
+            <div class="card-body">
+              <p class="titleofmovie">leo</p>
+              <button class="trailer" type="button">Trailer</button>
+              <button class="book" type="button">BOOK</button>
+            </div>
+          </div>
+        </div>
+        <div class="disforcard col-md-3">
+          <div class="card" style="background: black; border-radius: 15px">
+            <img src="assets/card images/Thunivu.jpg" alt="">
+            <div class="card-body">
+              <p class="titleofmovie">thunivu</p>
+              <button class="trailer" type="button">Trailer</button>
+              <button class="book" type="button">BOOK</button>
+            </div>
+          </div>
+        </div>
+        <div class="disforcard col-md-3">
+          <div class="card" style="background: black; border-radius: 15px">
+            <img src="assets/card images/vikram.jpg" alt="">
+            <div class="card-body">
+              <p class="titleofmovie">vikram</p>
+              <button class="trailer" type="button">Trailer</button>
+              <button class="book" type="button">BOOK</button>
+            </div>
+          </div>
+        </div>
+        <div class="disforcard col-md-3">
+          <div class="card" style="background: black; border-radius: 15px">
+            <img src="assets/card images/mark  antony.jpg" alt="">
+            <div class="card-body">
+              <p class="titleofmovie" style="font-size: 16px;">mark antony</p>
+              <button class="trailer" type="button">Trailer</button>
+              <button class="book" type="button">BOOK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="up-coming" id="up-comings">
+    <div class="container-fluid">
+      <p class="up-coming-heading">
+        <font class="up-coming-heading" style="color:red;">up</font> coming
+      </p>
+      <div class="row">
+        <div class="disforcard col-md-3">
+          <div class="card up-coming-img" style="background: black; border-radius: 15px">
+            <img src="assets/card images/ayalaan.jpg" alt="">
+            <div class="card-body">
+              <p class="titleofmovie-upcoming">ayalaan</p>
+              <button class="trailer" type="button" style="background-color: red;">Trailer</button>
+              <button class="book" type="button" style="background-color: red;">BOOK</button>
+            </div>
+          </div>
+        </div>
+        <div class="disforcard col-md-3">
+          <div class="card up-coming-img" style="background: black; border-radius: 15px">
+            <img src="assets/card images/kanguva.jpg" alt="">
+            <div class="card-body">
+              <p class="titleofmovie-upcoming">kanguva</p>
+              <button class="trailer" type="button" style="background-color: red;">Trailer</button>
+              <button class="book" type="button" style="background-color: red;">BOOK</button>
+            </div>
+          </div>
+        </div>
+        <div class="disforcard col-md-3">
+          <div class="card up-coming-img" style="background: black; border-radius: 15px">
+            <img src="assets/card images/japan.jpg" alt="">
+            <div class="card-body">
+              <p class="titleofmovie-upcoming">japan</p>
+              <button class="trailer" type="button" style="background-color: red;">Trailer</button>
+              <button class="book" type="button" style="background-color: red;">BOOK</button>
+            </div>
+          </div>
+        </div>
+        <div class="disforcard col-md-3">
+          <div class="card up-coming-img" style="background: black; border-radius: 15px">
+            <img src="assets/card images/captain miller.jpg" alt="">
+            <div class="card-body">
+              <p class="titleofmovie-upcoming" style="font-size: 16px;">captain miller</p>
+              <button class="trailer" type="button" style="background-color: red;">Trailer</button>
+              <button class="book" type="button" style="background-color: red;">BOOK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+  <div class="footer-box">
+    <div class="container-xl">
+      <div class="footer-section">
+        <div class="row row1">
+          <div class="col-md-4 fs">
+            <ul class="general">
+              <li class="general-heading">general</li>
+              <li><a href="">about us</a></li>
+              <li><a href="">contact us</a></li>
+              <li><a href="">faq's</a></li>
+              <li><a href="">news</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 fs">
+            <ul class="brand">
+              <li class="brand-heading">nila cinemas</li>
+              <li><a href="">imax</a></li>
+              <li><a href="">4dx</a></li>
+              <li><a href="">dolby</a></li>
+              <li><a href="">screenx</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 fs">
+            <ul class="cinemas">
+              <li class="cinemas-heading">cinemas</li>
+              <li><a href="">location</a></li>
+              <li><a href="#up-comings">upcoming</a></li>
+              <li><a href="#nowshowingmovies">now showing</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-xl">
+      <div class="row terms-policy">
+        <ul class="tp">
+          <li><a href="" style=" margin-right: 210px;">privacy policy</a></li>
+          <li><a href="" style="margin-right: 140px;">terms & conditions</a></li>
+          <li><a href="">terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md socialmedias">
+      <div> <a href=""><i class="fa-brands fa-instagram"></i> </a></div>
+      <div> <a href=""><i class="fa-brands fa-facebook"></i></a></div>
+      <div> <a href=""><i class="fa-brands fa-x-twitter"></i></a></div>
+      <div> <a href=""><i class="fa-brands fa-youtube"></i></a></div>
+      <div> <a href=""><i class="fa-brands fa-google-plus-g"></i></a> </div>
+  </div>
+    
+    <div class="container-md">
+      <p class="cpyryt">copyright &COPY; 2023 nila cinema limited. all rights reserved.</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="sctipt.js"></script>
+</body>
+
+</html>
